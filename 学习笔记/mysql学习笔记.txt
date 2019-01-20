@@ -1,0 +1,50 @@
+基本命令
+连接服务器 mysql -u`usename` -p`password` 
+连接后选择库 use databasename;
+查看所有库 show databases;
+查看库下面的所有表 show tables;
+创建数据库 create database name [charset 字符集(example utf8)]
+删除数据库 drop database name;
+数据库不能改名
+建表 
+create table table1(
+  列名 int,
+  列名 varchar(10)
+)engine myisam charset utf8;
+
+常用数据类型
+varchar(10) 可变长度字符串类型 maxlength=10
+char(10) 固定长度为10
+blob 二进制类型 音频图片视频
+text 字符窜类型
+data:日期类型 yyyy-mm-dd;
+time:时间类型 hh:mm:ss
+datetime 时间日期类型 yyyy-mm-dd hh:mm:ss
+※字符串类型和日期类型要用单引号括起来
+注释:engine是表引擎
+存储引擎
+myisam 不支持事务和外键  访问速度快
+innoDB 提供事务安全 磁盘占用大（常用）
+memory 在内存中创建表 快到自闭  关闭后表中会数据丢失
+
+
+删除表 drop table name;
+重命名表 rename table oldname to newname
+
+插入表
+insert into table1 values
+(1,'y'),
+(2,'j'),
+(3,'yy');
+
+
+查看表
+select * from tablename;
+
+清空表数据:truncate tablename;
+truncate 保留表   删表数据then rebuild一张长得一样的表，操作后得到一张全新表
+delete 擦除部分数据
+
+.frm 存表结构
+.MYD 存数据
+.MYI 存索引（目录）

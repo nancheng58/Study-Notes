@@ -1,0 +1,22 @@
+1.git init 仓库初始化
+2.设置签名 to 区分不同开发人员的身份
+  命令 （1）项目级别 仓库级别 ：仅在当前本地库范围内有效
+			  git config user.name tom_pro
+			  git config uesr.email good@qwq.com
+       （2）系统用户级别 ：登录当前操作系统的用户(Administrator)
+			  git config --global uesr.name tom_glb
+			  git config --global uesr.email good@qwq.com
+		级别优先级 就低原则  至少有一个      注：global 全局
+		存在.git/config 文件中
+3.git add file  将文件file提交到缓存区
+   git commit -m " 注释"file       将文件提交到本地库
+3.git 版本的后退与前进 git head hash_value
+4.git 删除文件的找回
+5.git 分支 
+   master 主干分支
+   git branch -v 查看分支
+   git branch [name] 建立名为name的分支 
+   git checkout hot_fix 切换到hot_fix分支
+   合并分支：step 1：切换到接受修改的分支（被合并，增加新内容）
+	   step  2：执行merge命令  git merge name （name为将要合并的分支）
+	   merge冲突的解决：（1）edit file,detele special characters （2）edit and esc （3）git add file （4） git commit -m "log"   (不加文件名)
